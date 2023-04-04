@@ -1,0 +1,22 @@
+{
+  "name": "helpers",
+  "version": "0.0.5",
+  "description": "",
+  "main": "bin/build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local-install": "npm pack && npm install -g helpers-0.0.5.tgz"
+  },
+  "bin": {
+    "hr": "bin/run.js",
+    "hb": "bin/build.js",
+    "hse": "bin/switchEnv.js",
+    "stagefiles": "bin/stage_files.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "8.2.0",
+    "yargs": "^17.5.1"
+  }
+}
