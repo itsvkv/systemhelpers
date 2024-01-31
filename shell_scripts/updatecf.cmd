@@ -1,0 +1,1 @@
+pwsh "E:\helpers\shell_scripts\updateCustomFunctions.ps1"

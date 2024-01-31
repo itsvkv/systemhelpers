@@ -17,15 +17,17 @@ if (Test-DirectoryInGitRepo) {
         $erpNumber = $Matches[0]
         Write-Host "ERP number: $erpNumber"
         # Get text input from the user
-        $inputText = Read-Host "Enter commit message"
+        $inputText = $1{text}
         # Append the ERP number to the input text
         $outputText = "$erpNumber $inputText"
-        stagefiles.ps1
+        #stagefiles.ps1
         git commit -m $outputText
+        git push
+        exit
     }
     else {
         Write-Host "No ERP number found in branch name."
-        $inputText = Read-Host "Enter commit message"
+        $inputText = $1{text}
         git commit -m $outputText
     }
 
